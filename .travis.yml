@@ -9,7 +9,7 @@ before_install:
     - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
-	- sudo apt-get install qt-latest
+    - sudo apt-get install qt-latest
 
 script:
     - set -e -x
