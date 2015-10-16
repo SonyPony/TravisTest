@@ -16,7 +16,6 @@ script:
     #- /opt/qt55/bin/qt55-env.sh
     #- qmake
     # qmake -qt=qt5
-    - make
     - qmake -qt=qt55 -v
     - qmake -qt=qt55
-    # make
+    - make
