@@ -9,6 +9,4 @@ ApplicationWindow {
     height: 480
     visible: true
 
-    Component.onCompleted: console.log("Foo")
-
 }
