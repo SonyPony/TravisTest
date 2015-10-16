@@ -12,9 +12,10 @@ before_install:
     - sudo apt-get install -qq qt5-qmake qt55base qt55declarative qt55quickcontrols qt55script
 
 script:
-    - set -e -x
-    - qmake -qt=qt5 -v
-    - qmake -qt=qt5
+    #- set -e -x
+    - /opt/qt55/bin/qt55-env.sh
+    - qmake
+    # qmake -qt=qt5
     - make
     # qmake -qt=qt5 -v
     # qmake -qt=qt5
