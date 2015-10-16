@@ -13,7 +13,8 @@ before_install:
 
 script:
     - set -e -x
-    - qmake
+    - qmake -qt=qt5 -v
+    - qmake -qt=qt5
     - make
     # qmake -qt=qt5 -v
     # qmake -qt=qt5
