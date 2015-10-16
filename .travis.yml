@@ -5,7 +5,7 @@ language:
   - cpp
 
 before_install:
-    - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
+    - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
     - sudo apt-get install -qq qt5-qmake qt55base qt55declarative qt55quickcontrols qt55script
 
