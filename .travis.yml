@@ -8,6 +8,8 @@ language:
 install:
     #- sudo apt-get install rubygems lcov
     #- gem install coveralls-lcov
+    - sudo apt-get install libyaml-dev libpython2.7-dev
+    - pip install pyyaml
 
     - sudo pip install cpp-coveralls
 
