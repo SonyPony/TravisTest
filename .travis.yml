@@ -30,11 +30,6 @@ script:
     - sleep 3
 
     - ./TravisTest --test
-    - ls
 
 after_success:
-    - echo `pwd`
-    #- coveralls #--build-root "build"
-    - coveralls --verbose > coveralls.log
-    - cat coveralls.log
-    - ls
+    - coveralls 
