@@ -1,15 +1,11 @@
-sudo: false
-
 os:
   - linux
 
 language:
   - cpp
 
-before_install:
-    - pip install cpp-coveralls
-
 install:
+    - pip install cpp-coveralls
     - apt-add-repository -y ppa:ubuntu-toolchain-r/test
     - add-apt-repository --yes ppa:beineri/opt-qt55
     - apt-get update -qq
