@@ -43,7 +43,7 @@ script:
     - ls
 
 after_success:
-    - echo $PWD
+    - echo `pwd`
     - coveralls -b $PWD
     #- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
     #- coveralls --build-root "build"
