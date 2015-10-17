@@ -35,6 +35,9 @@ script:
     - ps -ef
     - killall TravisTest
 
+after_script:
+    - echo here
+
 after_success:
     - coveralls --build-root "build"
     - ps -ef
