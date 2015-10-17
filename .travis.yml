@@ -25,5 +25,11 @@ script:
     - qmake
     - make
 
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+    - sleep 3
+    - openbox
+    - TravisTest
+
 after_success:
     - coveralls --build-root "build"
