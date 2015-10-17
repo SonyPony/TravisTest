@@ -31,7 +31,7 @@ script:
     #- openbox
     - echo Fpp
     - ./TravisTest
-    -echo Dpp
+    - echo Dpp
     - ps -ef
     - killall TravisTest
 
