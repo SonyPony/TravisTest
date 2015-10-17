@@ -13,5 +13,4 @@ class Tests : public QObject
         void falseTest();
 };
 
-QTEST_MAIN(Tests)
 #endif // TESTS_H
