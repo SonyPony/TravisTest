@@ -4,9 +4,6 @@ os:
 language:
   - cpp
 
-before_install:
-  - pip install --user cpp-coveralls
-
 install:
     - sudo apt-get install python-yaml
     - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
@@ -36,6 +33,7 @@ script:
 
 after_success:
     - echo `pwd`
+    - sudo pip install cpp-coveralls
     #- coveralls #--build-root "build"
-    - coveralls -b . -r . -y .coveralls.yml --gcov-options '\-lp' --verbose
+    - coveralls -b `pwd` -y .coveralls.yml --verbose > coveralls.log
     - ls
