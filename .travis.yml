@@ -46,6 +46,7 @@ script:
 
 after_success:
     - echo `pwd`
+    - PYTHONWARNINGS="ignore:Unverified HTTPS request" ./do-insecure-request.py
     #- coveralls
     #- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
     - coveralls #--build-root "build"
