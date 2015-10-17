@@ -1,8 +1,9 @@
 TEMPLATE = app
 
-QT += qml quick widgets
+QT += qml quick widgets testlib
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    tests.cpp
 
 RESOURCES += qml.qrc
 
@@ -11,3 +12,6 @@ QML_IMPORT_PATH =
 
 # Default rules for deployment.
 include(deployment.pri)
+
+HEADERS += \
+    tests.h
