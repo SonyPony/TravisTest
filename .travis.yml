@@ -19,5 +19,5 @@ script:
     #- $QMAKE
     #- $QMAKE
     - qmake -v
-    - ls /usr/lib/
+    - ls /usr/lib/x86_64-linux-gnu
     - make
