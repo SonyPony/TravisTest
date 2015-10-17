@@ -5,7 +5,7 @@ language:
   - cpp
 
 before_install:
-    - pip install cpp-coveralls --use-mirrors
+    - sudo pip install cpp-coveralls
 
 install:
     - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
