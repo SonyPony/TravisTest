@@ -5,6 +5,7 @@ language:
   - cpp
 
 install:
+    - sudo pip install cpp-coveralls
     - sudo apt-get install python-yaml
     - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
@@ -33,7 +34,7 @@ script:
 
 after_success:
     - echo `pwd`
-    - sudo pip install cpp-coveralls
     #- coveralls #--build-root "build"
-    - coveralls -b `pwd` -y .coveralls.yml --verbose > coveralls.log
+    - coveralls -y .coveralls.yml --verbose > coveralls.log
+    - cat coveralls.log
     - ls
