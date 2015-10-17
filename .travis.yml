@@ -4,8 +4,13 @@ os:
 language:
   - cpp
 
+
 install:
+    #- sudo apt-get install rubygems lcov
+    #- gem install coveralls-lcov
+
     - sudo pip install cpp-coveralls
+
     - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
@@ -20,10 +25,15 @@ script:
     - qt55-env.sh 
 
     #- ./configure --enable-gcov
+    - qmake -v
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
-    - qmake
+    #- qmake
+
+    #- make coverage
+    #- cat coverage/Irc*.cov > Communi.cov
+    #- coveralls-lcov Communi.cov
     - make
-    - make check
+    #- make check
 
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
@@ -33,5 +43,7 @@ script:
     - ls
 
 after_success:
-    - coveralls --exclude lib --exclude tests --gcov-options '\-lp'
-    - coveralls --build-root "build"
+    - echo $PWD
+    - coveralls -b $PWD
+    #- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
+    #- coveralls --build-root "build"
