@@ -2,6 +2,12 @@
 #include <QQmlApplicationEngine>
 #include "tests.h"
 
+void foo() {
+    int a = 1;
+    a++;
+    a++;
+}
+
 int main(int argc, char *argv[])
 {
 

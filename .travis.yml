@@ -19,8 +19,9 @@ script:
     - PATH="$QTDIR/bin:$PATH"
     - qt55-env.sh 
 
-    - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
-    - qmake
+    - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage
+    #- qmake TravisTest.pro CONFIG+=debug "QT += testlib"
+    #- qmake
     - make
 
     - export DISPLAY=:99.0
