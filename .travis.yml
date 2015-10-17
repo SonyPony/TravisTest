@@ -36,5 +36,5 @@ script:
 after_success:
     - echo `pwd`
     #- coveralls #--build-root "build"
-    - coveralls -b . -r . --gcov-options '\-lp'
+    - coveralls -b . -r . -y .coveralls.yml --gcov-options '\-lp' --verbose
     - ls
