@@ -19,5 +19,5 @@ script:
     #- $QMAKE
     - qmake -v
     - ls /usr/lib/x86_64-linux-gnu
-    - ls /usr/local/opt/
+    - ls /opt/
     - make
