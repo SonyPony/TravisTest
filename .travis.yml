@@ -35,6 +35,6 @@ script:
 after_success:
     - echo `pwd`
     #- coveralls #--build-root "build"
-    - coveralls -y .coveralls.yml --verbose > coveralls.log
+    - coveralls --verbose > coveralls.log
     - cat coveralls.log
     - ls
