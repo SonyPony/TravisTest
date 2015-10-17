@@ -4,14 +4,17 @@
 
 int main(int argc, char *argv[])
 {
-    Tests t;
 
     QApplication app(argc, argv);
 
+    Tests t;
     QTest::qExec(&t);
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
-    return app.exec();
+    if(QApplication::arguments().contains("--test"))
+        return 0;
+    else
+        return app.exec();
 }

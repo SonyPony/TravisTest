@@ -31,14 +31,6 @@ script:
     #- openbox
     - echo Fpp
     - ./TravisTest
-    - echo Dpp
-    - ps -ef
-    - killall TravisTest
-
-after_script:
-    - echo here
 
 after_success:
     - coveralls --build-root "build"
-    - ps -ef
-    - killall TravisTest
