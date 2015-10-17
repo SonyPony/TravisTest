@@ -12,10 +12,11 @@ before_install:
     - sudo apt-get install qt-latest
 
 script:
-    - QMAKE="qmake"
+    #- QMAKE="qmake"
     #- /opt/qt55/bin/qt55-env.sh
     #- qmake
     # qmake -qt=qt5
-    - $QMAKE
-    - $QMAKE
+    #- $QMAKE
+    #- $QMAKE
+    - qmake -v
     - make
