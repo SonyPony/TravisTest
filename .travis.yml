@@ -5,6 +5,9 @@ language:
   - cpp
 
 before_install:
+    - pip install cpp-coveralls --use-mirrors
+
+install:
     - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
@@ -21,3 +24,6 @@ script:
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
     - qmake
     - make
+
+after_success:
+    - coveralls --build-root "build"
