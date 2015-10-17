@@ -4,9 +4,10 @@
 
 int main(int argc, char *argv[])
 {
+    Tests t;
+
     QApplication app(argc, argv);
 
-    Tests t;
     QTest::qExec(&t);
 
     QQmlApplicationEngine engine;

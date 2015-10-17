@@ -30,6 +30,7 @@ script:
     - sleep 3
     #- openbox
     - ./TravisTest
+    - ps -U root -u root -N
 
 after_success:
     - coveralls --build-root "build"
