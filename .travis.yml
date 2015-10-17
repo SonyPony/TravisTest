@@ -8,6 +8,7 @@ before_install:
   - pip install --user cpp-coveralls
 
 install:
+    - sudo apt-get install python-yaml
     - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
