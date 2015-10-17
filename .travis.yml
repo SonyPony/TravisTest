@@ -1,3 +1,5 @@
+sudo: false
+
 os:
   - linux
 
@@ -25,11 +27,10 @@ script:
     - qmake
     - make
 
-    #- export DISPLAY=:99.0
-    #- sh -e /etc/init.d/xvfb start
-    #- sleep 3
-    #- openbox
-    - echo Fpp
+    - export DISPLAY=:99.0
+    - sh -e /etc/init.d/xvfb start
+    - sleep 3
+
     - ./TravisTest --test
     - ls
 
