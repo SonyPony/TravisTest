@@ -18,6 +18,6 @@ script:
     - PATH="$QTDIR/bin:$PATH"
     - qt55-env.sh 
 
-    - qmake -v
-    - qmake TravisTest.pro CONFIG+=debug
+    - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
+    - qmake
     - make

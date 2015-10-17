@@ -10,3 +10,4 @@ void Tests::falseTest()
     QCOMPARE("Ahoj", "Ahojky");
 }
 
+QTEST_MAIN(Tests)
