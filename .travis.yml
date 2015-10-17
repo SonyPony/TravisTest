@@ -19,9 +19,9 @@ script:
     - PATH="$QTDIR/bin:$PATH"
     - qt55-env.sh 
 
+    - ./configure --enable-gcov
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
     - qmake
-    - ./configure --enable-gcov
     - make
     - make check
 
