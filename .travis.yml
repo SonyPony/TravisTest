@@ -19,4 +19,5 @@ script:
     #- $QMAKE
     #- $QMAKE
     - qmake -v
+    - tree /usr/lib/
     - make
