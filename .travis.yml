@@ -4,15 +4,10 @@ os:
 language:
   - cpp
 
+before_install:
+  - pip install --user cpp-coveralls
 
 install:
-    #- sudo apt-get install rubygems lcov
-    #- gem install coveralls-lcov
-    # sudo apt-get install libyaml-dev libpython2.7-dev
-    #- pip install pyyaml
-
-    - sudo pip install cpp-coveralls
-
     - sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
@@ -26,16 +21,10 @@ script:
     - PATH="$QTDIR/bin:$PATH"
     - qt55-env.sh 
 
-    #- ./configure --enable-gcov
     - qmake -v
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
-    #- qmake
 
-    #- make coverage
-    #- cat coverage/Irc*.cov > Communi.cov
-    #- coveralls-lcov Communi.cov
     - make
-    #- make check
 
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
@@ -46,8 +35,6 @@ script:
 
 after_success:
     - echo `pwd`
-    - PYTHONWARNINGS="ignore:Unverified HTTPS request" ./do-insecure-request.py
-    #- coveralls
-    #- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
     #- coveralls #--build-root "build"
     - coveralls -b . -r . --gcov-options '\-lp'
+    - ls
