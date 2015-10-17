@@ -9,7 +9,7 @@ install:
     #- sudo apt-get install rubygems lcov
     #- gem install coveralls-lcov
     # sudo apt-get install libyaml-dev libpython2.7-dev
-    - pip install pyyaml
+    #- pip install pyyaml
 
     - sudo pip install cpp-coveralls
 
@@ -48,4 +48,4 @@ after_success:
     - echo `pwd`
     #- coveralls
     #- coveralls --exclude lib --exclude tests --gcov-options '\-lp'
-    - coveralls --build-root "build"
+    - coveralls #--build-root "build"
