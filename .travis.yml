@@ -29,9 +29,13 @@ script:
     - sh -e /etc/init.d/xvfb start
     - sleep 3
     #- openbox
+    - echo Fpp
     - ./TravisTest
+    -echo Dpp
     - ps -ef
     - killall TravisTest
 
 after_success:
     - coveralls --build-root "build"
+    - ps -ef
+    - killall TravisTest
