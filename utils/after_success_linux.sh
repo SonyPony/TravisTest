@@ -1,6 +1,6 @@
 #!/bin/bash
 
-exclude_files=()
+#exclude_files=()
 
 # Exclude generated files.
 exclude_regexs=(
@@ -15,9 +15,9 @@ exclude_regexs=(
 
 arguments=()
 
-for file in "${exclude_files[@]}"; do
-    arguments+=(--exclude "$file")
-done
+#for file in "${exclude_files[@]}"; do
+#    arguments+=(--exclude "$file")
+#done
 
 for regex in "${exclude_regexs[@]}"; do
     arguments+=(--exclude-pattern "$regex")
