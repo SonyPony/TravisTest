@@ -1,4 +1,4 @@
-exclude_folders=()
+exclude_files=()
 
 # Exclude generated files.
 exclude_regexs=(
