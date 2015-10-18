@@ -1,6 +1,7 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include "tests/tests.h"
+#include "foo/tt.h"
 
 void foo() {
     int a = 1;
