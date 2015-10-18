@@ -34,4 +34,4 @@ script:
 after_success:
     - cd utils
     - chmod +x after_success_linux.sh
-    - sudo sh after_success_linux.sh
+    - sudo ./after_success_linux.sh
