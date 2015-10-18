@@ -4,7 +4,8 @@ QT += qml quick widgets testlib
 
 SOURCES += main.cpp \
     tests/tests.cpp \
-    foo/tt.cpp
+    foo/tt.cpp \
+    foo/dd.cpp
 
 RESOURCES += qml.qrc
 TARGET = TravisTest
@@ -23,4 +24,5 @@ LIBS += \
 
 HEADERS += \
     tests/tests.h \
-    foo/tt.h
+    foo/tt.h \
+    foo/dd.h
