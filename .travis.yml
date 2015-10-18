@@ -32,4 +32,4 @@ script:
     - ./TravisTest --test
 
 after_success:
-    - sudo utils/after_success_linux.sh
+    - sudo ./utils/after_success_linux.sh./
