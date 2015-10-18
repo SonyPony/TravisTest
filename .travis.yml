@@ -39,7 +39,7 @@ script:
     - sleep 3
 
     - ls
-    - ./TravisTest --test
+    - ./src/TravisTest --test
 
 after_success:
     - exclude_regexs=('.*/moc_.*' '.*\.moc$' '.*_automoc\..*' '.*/ui_.*' '.*/qrc_.*' '.*CMake.*' '.*/tests/.*')
