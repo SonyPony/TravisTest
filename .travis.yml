@@ -38,6 +38,7 @@ script:
     - sh -e /etc/init.d/xvfb start
     - sleep 3
 
+    - ls
     - ./TravisTest --test
 
 after_success:

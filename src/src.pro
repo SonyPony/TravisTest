@@ -6,6 +6,7 @@ SOURCES += main.cpp \
     tests/tests.cpp
 
 RESOURCES += qml.qrc
+TARGET = ../TravisTest
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
 QML_IMPORT_PATH =
