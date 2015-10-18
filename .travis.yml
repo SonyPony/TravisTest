@@ -39,7 +39,7 @@ script:
     - sleep 3
 
     - ls -R
-    - ./src/TravisTest --test
+    - ./TravisTest --test
 
 after_success:
     - cd src
