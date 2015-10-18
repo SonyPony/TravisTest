@@ -32,6 +32,4 @@ script:
     - ./TravisTest --test
 
 after_success:
-    - ls
-    - ls utils
-    - utils/after_success.sh
+    - utils/after_success_linux.sh
