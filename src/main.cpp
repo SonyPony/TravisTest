@@ -1,6 +1,6 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
-#include "tests.h"
+#include "tests/tests.h"
 
 void foo() {
     int a = 1;
@@ -15,6 +15,8 @@ int main(int argc, char *argv[])
 
     Tests t;
     QTest::qExec(&t);
+
+    foo();
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
