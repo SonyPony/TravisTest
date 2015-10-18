@@ -1,4 +1,6 @@
-#exclude_files=()
+#!/bin/bash
+
+exclude_files=()
 
 # Exclude generated files.
 exclude_regexs=(
