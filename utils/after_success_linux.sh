@@ -23,4 +23,4 @@ for regex in "${exclude_regexs[@]}"; do
     arguments+=(--exclude-pattern "$regex")
 done
 
-coveralls "${arguments[@]}"
+coveralls "${arguments[@]}" -b `pwd` -r `pwd`
