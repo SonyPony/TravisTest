@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     Tests t;
-    QTest::qExec(&t);
+    qDebug() << QTest::qExec(&t);
 
     foo();
 
