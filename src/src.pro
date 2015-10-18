@@ -3,7 +3,8 @@ TEMPLATE = app
 QT += qml quick widgets testlib
 
 SOURCES += main.cpp \
-    tests/tests.cpp
+    tests/tests.cpp \
+    foo/tt.cpp
 
 RESOURCES += qml.qrc
 TARGET = ../TravisTest
@@ -21,4 +22,5 @@ LIBS += \
     -lgcov
 
 HEADERS += \
-    tests/tests.h
+    tests/tests.h \
+    foo/tt.h
