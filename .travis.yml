@@ -1,4 +1,4 @@
-sudo: false
+#sudo: false
 
 os:
   - linux
@@ -9,17 +9,20 @@ language:
 addons:
     apt: 
         sources:
-            - ubuntu-toolchain-r/test
+            - ubuntu-toolchain-r-test
             - beineri/opt-qt55
 
         packages:
             - python-yaml
             - g++-4.8 
             - libc6-i386
-            - qt-latest
+            #- qt-latest
 
 install:
-    - pip install cpp-coveralls
+    - sudo pip install cpp-coveralls
+    - sudo add-apt-repository --yes ppa:beineri/opt-qt55
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq qt-latest
 
 after_install:
     #- sudo pip install cpp-coveralls
