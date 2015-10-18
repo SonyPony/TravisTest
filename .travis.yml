@@ -34,5 +34,5 @@ script:
 after_success:
     #- coveralls
     #- cd utils
-    - chmod +x utils/after_success_linux.sh
-    - sudo sh utils/after_success_linux.sh
+    - chmod +x ./utils/after_success_linux.sh
+    - sudo ./utils/after_success_linux.sh
