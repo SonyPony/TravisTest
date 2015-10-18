@@ -14,15 +14,16 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
 
     Tests t;
-    qDebug() << QTest::qExec(&t);
+    int result = 0;
+    result |= QTest::qExec(&t);
 
-    foo();
+    //foo();
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     if(QApplication::arguments().contains("--test"))
-        return 0;
+        return result;
     else
         return app.exec();
 }
