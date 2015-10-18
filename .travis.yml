@@ -34,5 +34,7 @@ script:
 after_success:
     #- coveralls
     #- cd utils
-    - chmod +x ./utils/after_success_linux.sh
-    - sudo ./utils/after_success_linux.sh
+    - exclude_regexs=('.*/moc_.*' '.*\.moc$' '.*_automoc\..*' '.*/ui_.*' '.*/qrc_.*' '.*CMake.*' '.*/tests/.*')
+    - arguments=()
+    - for regex in "${exclude_regexs[@]}"; do arguments+=(--exclude-pattern "$regex"); done
+    - coveralls "${arguments[@]}"
