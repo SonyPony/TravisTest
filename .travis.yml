@@ -38,10 +38,11 @@ script:
     - sh -e /etc/init.d/xvfb start
     - sleep 3
 
-    - ls
+    - ls -R
     - ./src/TravisTest --test
 
 after_success:
+    - cd src
     - exclude_regexs=('.*/moc_.*' '.*\.moc$' '.*_automoc\..*' '.*/ui_.*' '.*/qrc_.*' '.*CMake.*' '.*/tests/.*')
     - arguments=()
     - for regex in "${exclude_regexs[@]}"; do arguments+=(--exclude-pattern "$regex"); done
