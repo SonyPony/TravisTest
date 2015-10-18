@@ -4,7 +4,6 @@ QT += qml quick widgets testlib
 
 SOURCES += main.cpp \
     tests/tests.cpp \
-    foo/tt.cpp \
     foo/dd.cpp
 
 RESOURCES += qml.qrc
@@ -24,5 +23,4 @@ LIBS += \
 
 HEADERS += \
     tests/tests.h \
-    foo/tt.h \
     foo/dd.h
