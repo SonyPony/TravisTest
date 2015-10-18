@@ -7,5 +7,5 @@ void Tests::trueTest()
 
 void Tests::falseTest()
 {
-    QCOMPARE("Ahojky", "Ahojkdy");
+    QCOMPARE("Ahojky", "Ahojky");
 }
