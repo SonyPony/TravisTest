@@ -16,11 +16,9 @@ addons:
             - python-yaml
             - libc6-i386
 
-before_install:
+install:
     - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
     - sudo apt-get update -qq
-
-install:
     - sudo apt-get install -qq g++-4.8
     - export CXX="g++-4.8"
 
