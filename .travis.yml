@@ -18,6 +18,8 @@ addons:
             - g++-4.8
 
 install:
+    - export GCC="gcc-4.8"
+    - export G++="g++-4.8"
     - sudo pip install cpp-coveralls
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
@@ -31,6 +33,7 @@ script:
     - qmake -v
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
 
+    -g++ --version
     - make CC=gcc-4.8 CXX=g++-4.8
 
     - export DISPLAY=:99.0
