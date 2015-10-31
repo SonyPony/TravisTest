@@ -33,7 +33,7 @@ script:
     - qmake -v
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
 
-    -g++ --version
+    - g++ --version
     - make CC=gcc-4.8 CXX=g++-4.8
 
     - export DISPLAY=:99.0
