@@ -38,7 +38,7 @@ script:
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
 
     - make -v
-    - make
+    - make CC=gcc-4.8 CXX=g++-4.8
 
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
