@@ -22,7 +22,7 @@ install:
     - sudo apt-get install -qq g++-4.8
     - export CXX="g++-4.8"
 
-    - g++ --version
+    - $CXX --version
 
     - sudo pip install cpp-coveralls
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
@@ -37,6 +37,7 @@ script:
     - qmake -v
     - qmake TravisTest.pro CONFIG+=debug "QT += testlib"
 
+    - make -v
     - make
 
     - export DISPLAY=:99.0
