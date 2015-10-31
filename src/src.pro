@@ -1,5 +1,5 @@
 TEMPLATE = app
-
+CONFIG += c++11
 QT += qml quick widgets testlib
 
 SOURCES += main.cpp \

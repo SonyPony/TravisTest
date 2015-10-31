@@ -1,5 +1,5 @@
 TEMPLATE = subdirs
-
+CONFIG += c++11
 SUBDIRS +=  src
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
