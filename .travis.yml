@@ -48,4 +48,4 @@ after_success:
     - exclude_regexs=('.*/moc_.*' '.*\.moc$' '.*_automoc\..*' '.*/ui_.*' '.*/qrc_.*' '.*CMake.*' '.*/tests/.*')
     - arguments=()
     - for regex in "${exclude_regexs[@]}"; do arguments+=(--exclude-pattern "$regex"); done
-    - coveralls "${arguments[@]}"
+    - coveralls --gcov /usr/bin/gcov-4.8" ${arguments[@]}"
