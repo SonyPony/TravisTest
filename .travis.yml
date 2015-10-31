@@ -19,7 +19,6 @@ addons:
 
 install:
     - export GCC="gcc-4.8"
-    - export G++="g++-4.8"
     - sudo pip install cpp-coveralls
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
