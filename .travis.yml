@@ -18,8 +18,10 @@ addons:
             - g++-4.8
 
 install:
-    - sudo update-alternatives --config g++
-    - export GCC="gcc-4.8"
+    - alias gcc='gcc-4.8'
+    - alias cc='gcc-4.8'
+    - alias g++='g++-4.8'
+    - alias c++='c++-4.8'
     - sudo pip install cpp-coveralls
     - sudo add-apt-repository --yes ppa:beineri/opt-qt55
     - sudo apt-get update -qq
