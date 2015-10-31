@@ -1,7 +1,11 @@
 #include "dd.h"
 
-dd::dd()
+dd::dd(int c)
 {
-    int a;
+
 }
 
+dd::dd(int c, int a): dd(c)
+{
+
+}

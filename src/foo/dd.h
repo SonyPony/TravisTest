@@ -5,7 +5,8 @@
 class dd
 {
     public:
-        dd();
+        dd(int c);
+        dd(int c, int a);
 };
 
 #endif // DD_H
