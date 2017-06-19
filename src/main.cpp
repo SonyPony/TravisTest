@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     int result = 0;
     result |= QTest::qExec(&t);
 
-    //foo();
+    foo();
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
